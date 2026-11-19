@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>私の思い出の写真を振り返るインタビュー｜プロンプト</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #263238;
+      --muted: #59666d;
+      --line: #d8e0e3;
+      --paper: #ffffff;
+      --soft: #f3f7f6;
+      --accent: #176b58;
+      --accent-hover: #105342;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 28px 16px 40px;
+      background: #eef2f1;
+      color: var(--ink);
+      font-family: "Meiryo", "Yu Gothic", sans-serif;
+      line-height: 1.8;
+    }
+    main {
+      width: min(900px, 100%);
+      margin: 0 auto;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: clamp(20px, 4vw, 38px);
+      box-shadow: 0 4px 18px rgba(30, 55, 50, .06);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.35rem, 3vw, 1.8rem);
+      line-height: 1.45;
+    }
+    .intro { margin: 0 0 22px; color: var(--muted); }
+    .notice {
+      margin: 0 0 22px;
+      padding: 14px 16px;
+      background: var(--soft);
+      border-left: 4px solid var(--accent);
+      border-radius: 6px;
+    }
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin: 18px 0 14px;
+    }
+    button {
+      appearance: none;
+      border: 0;
+      border-radius: 8px;
+      background: var(--accent);
+      color: white;
+      padding: 13px 24px;
+      min-height: 50px;
+      font: inherit;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    button:hover { background: var(--accent-hover); }
+    button:focus-visible { outline: 3px solid #f0b429; outline-offset: 3px; }
+    #status { color: var(--muted); font-size: .95rem; }
+    pre {
+      margin: 0;
+      padding: 22px;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      background: #fbfcfc;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      font-family: "Meiryo", "Yu Gothic", sans-serif;
+      font-size: 1rem;
+      line-height: 1.9;
+    }
+    .footnote { margin: 18px 0 0; color: var(--muted); font-size: .92rem; }
+    @media (max-width: 560px) {
+      body { padding: 12px 8px 24px; }
+      main { padding: 18px 14px; border-radius: 10px; }
+      pre { padding: 15px; font-size: .95rem; }
+      button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>私の思い出の写真を振り返るインタビュー</h1>
+  <p class="intro">下の「プロンプトをコピー」ボタンを押し、ChatGPTなどの生成AIの入力欄に貼り付けてください。</p>
+
+  <p class="notice"><strong>写真はAIに送信しません。</strong><br>
+  スマートフォンで写真を見ながら、AIの質問に言葉で答えて進めます。</p>
+
+  <div class="actions">
+    <button type="button" id="copyButton">プロンプトをコピー</button>
+    <span id="status" role="status" aria-live="polite">ボタンを押すと、下の文章をコピーします。</span>
+  </div>
+
+  <pre id="prompt"># 私の思い出の写真を振り返るインタビュー
+
+あなたは、私の思い出を聞いてくれる聞き上手なインタビュアーです。
+
+これから、私がスマートフォンで写真を1枚選び、その写真を見ながら、あなたの質問に答えていきます。
+
+写真はAIに送信しません。私が写真を見ながら、あなたの質問に言葉で答えます。
+
+## インタビューの進め方
+
+1. 質問は必ず一度に1つだけにしてください。
+2. 私の答えを待ってから、次の質問をしてください。
+3. 難しい言葉や長い質問は使わず、簡単で答えやすい言葉で聞いてください。
+4. 私が短い言葉で答えても、無理に詳しく説明させないでください。
+5. 私の答えに興味を持ち、自然な会話になるように進めてください。
+6. 私が話していないことを想像して、事実のように付け加えないでください。
+
+## 質問してほしいこと
+
+次の内容を目安に、5～6問程度でインタビューしてください。
+
+- この写真は、いつごろ撮ったものですか？
+- どこで撮った写真ですか？
+- 誰と一緒でしたか？または、何をしていたときですか？
+- そのとき、特に心に残っていることはありますか？
+- そのとき、どんな気持ちでしたか？
+- 今、この写真を見返して、どんな気持ちになりますか？
+
+すべての質問を順番どおりに聞く必要はありません。私の答えに合わせて、自然に質問を選んでください。
+
+## インタビューの最後に
+
+インタビューが終わったら、私が話した内容を次の項目に分けて、簡単に整理してください。
+
+- 写真の時期・場所
+- 一緒にいた人や出来事
+- 心に残っていること
+- そのときの気持ち
+- 今、振り返って感じること
+
+最後に、私の思い出を大切に扱いながら、画像生成に使えるような情景の説明文を作ってください。
+
+まだ画像は生成しないでください。
+
+整理した内容を私に見せて、間違いや付け加えたいことがないか確認してください。
+
+それでは、最初の質問から始めてください。</pre>
+
+  <p class="footnote">※コピーした後、生成AIの入力欄を開き、貼り付け（Ctrl＋V または長押しして「ペースト」）してください。</p>
+</main>
+
+<script>
+  const copyButton = document.getElementById('copyButton');
+  const promptElement = document.getElementById('prompt');
+  const statusElement = document.getElementById('status');
+
+  copyButton.addEventListener('click', async () => {
+    const text = promptElement.textContent;
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(text);
+      } else {
+        const temporary = document.createElement('textarea');
+        temporary.value = text;
+        temporary.setAttribute('readonly', '');
+        temporary.style.position = 'fixed';
+        temporary.style.opacity = '0';
+        document.body.appendChild(temporary);
+        temporary.select();
+        const succeeded = document.execCommand('copy');
+        temporary.remove();
+        if (!succeeded) throw new Error('copy failed');
+      }
+      statusElement.textContent = 'コピーしました。生成AIの入力欄に貼り付けてください。';
+      copyButton.textContent = 'コピーしました';
+      window.setTimeout(() => { copyButton.textContent = 'プロンプトをコピー'; }, 2200);
+    } catch (error) {
+      statusElement.textContent = '自動コピーできませんでした。下の文章を選択してコピーしてください。';
+    }
+  });
+</script>
+</body>
+</html>
